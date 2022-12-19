@@ -1,23 +1,24 @@
-﻿// Задача 63: Задайте значение N. Напишите программу, 
-// которая выведет все натуральные числа в промежутке от 1 до N.
-// N = 5 -> "1, 2, 3, 4, 5"
-// N = 6 -> "1, 2, 3, 4, 5, 6"
+﻿// Задача 67: Напишите программу, которая будет 
+// принимать на вход число и возвращать сумму его цифр.
+// 453 -> 12
+// 45 -> 9
 
 Console.Clear();
 
 Console.Write("Введите натуральное число N: ");
 int n = EnterDigit();
 
-PrintNatural(n);
+Console.WriteLine(SumOfDigits(n));
 
-void PrintNatural(int digit)
+int SumOfDigits(int digit)
 {
+    int sum = 0;
     if (digit == 0)
     {
-        return;
+        return 0;
     }
-    PrintNatural(digit - 1);
-    Console.Write(digit + " ");
+    sum = SumOfDigits(digit / 10) + digit % 10;
+    return sum;
 }
 
 int EnterDigit()

@@ -17,7 +17,7 @@ void PrintNatural(int digitN, int digitM)
 {
     if (digitM <= digitN)
     {
-        Console.WriteLine(digitM);
+        Console.Write(digitM + " ");
         PrintNatural(digitN, digitM + 1);
     }
 }
@@ -27,7 +27,7 @@ int EnterDigit()
     int digit;
     while (true)
     {
-        if (int.TryParse(Console.ReadLine(), out digit)) ;
+        int.TryParse(Console.ReadLine(), out digit);
         if (digit > 0) break;
         else Console.Write("Ну просил же натуральное ЧИСЛО: ");
     }
