@@ -11,7 +11,7 @@ Console.Write("Введите натуральное число N: ");
 int n = EnterDigit();
 
 int res = AkkermanFunction(m, n);
-if (res == -1) Console.WriteLine("Функция не может быть расчитана. Заданы недопустимые параметры.");
+if (res == -1) Console.WriteLine("Функция не может быть рассчитана. Заданы недопустимые параметры.");
 else Console.WriteLine($"Результат вычисления Функции Аккермана  = {res}");
 
 int AkkermanFunction(int digitM, int digitN)
